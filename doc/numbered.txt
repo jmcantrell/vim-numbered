@@ -1,0 +1,21 @@
+*numbered.txt*  Number items in a list.
+
+Author:  Jeremy Cantrell <jmcantrell@gmail.com>       *numbered-author*
+License: Same terms as Vim itself (see |license|)
+
+INTRODUCTION                                          *numbered* *numbered.vim*
+
+The numbered plugin provides a single command that add or sets numbers for
+a list of items in a range.
+
+COMMANDS                                              *numbered-commands*
+
+:[range]Numbered [start]    Number the items in [range]. Counting starts with
+                            [start] or 1 if not provided.
+
+CONFIGURATION                                         *numbered-configuration*
+
+g:numbered_loaded                                     *g:numbered_loaded*
+    If set in your |vimrc|, numbered.vim is not loaded.
+
+vim:tw=78:et:ft=help:norl:
