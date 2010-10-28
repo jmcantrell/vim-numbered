@@ -1,7 +1,7 @@
 " Filename:      numbered.vim
 " Description:   Number a list of items.
 " Maintainer:    Jeremy Cantrell <jmcantrell@gmail.com>
-" Last Modified: Sat 2010-10-23 23:30:54 (-0400)
+" Last Modified: Sun 2010-10-24 22:09:09 (-0400)
 
 if exists("g:numbered_loaded")
     finish
@@ -22,7 +22,7 @@ function! s:Numbered(...) range
         else
             let line = n.' '.line
         endif
-        call setline(lnum, line)
+        call setline(lnum, substitute(line, '\s\+$', '', ''))
         let n += 1
     endfor
 endfunction
