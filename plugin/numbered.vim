@@ -16,7 +16,7 @@ function! s:Numbered(...) range
     let n = a:0 == 0 ? 1 : a:1
     for lnum in range(a:firstline, a:lastline)
         let line = getline(lnum)
-        let match = matchstr(line, '\d\+')
+        let match = matchstr(line, '^\d\+')
         if strlen(match)
             let line = substitute(line, match, n, '')
         else
