@@ -20,7 +20,7 @@ function! s:Numbered(...) range
         if strlen(match)
             let line = substitute(line, match, n, '')
         else
-            let line = n.' '.line
+            let line = n.'. '.line
         endif
         call setline(lnum, substitute(line, '\s\+$', '', ''))
         let n += 1
